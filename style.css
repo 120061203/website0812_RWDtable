@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.rwd_table {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #f00;
+}
+
+th,
+td {
+    border: 1px solid #00f;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    /* .rwd_table {} */
+    .rwd_table thead {
+        display: none;
+    }
+    .rwd_table tr {
+        display: block;
+        text-align: left;
+        border: 1px solid #000;
+        margin-bottom: 20px;
+    }
+    .rwd_table td {
+        display: block;
+        text-align: left;
+        border: none;
+        padding-left: 6rem;
+        text-indent: -6rem;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .rwd_table td+td {
+        border-top: 1px solid #ccc;
+    }
+    .rwd_table td:before {
+        content: attr(data-title) ':';
+        color: #f00;
+        display: inline-block;
+        width: 5rem;
+        /*設定寬度才可以讓不同字數的title都對齊*/
+        text-align: right;
+        padding-right: 6px;
+    }
+}
